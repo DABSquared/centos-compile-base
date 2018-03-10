@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-RUN yum -y update && yum -y groupinstall 'Development Tools' && yum -y install gsl gsl-devel autoconf ant texinfo kernel kernel-devel httpd wget
+RUN yum -y update && yum -y groupinstall 'Development Tools' && yum -y install gsl gsl-devel autoconf ant texinfo kernel zlib-devel kernel-devel httpd wget
 
 RUN wget http://repository.it4i.cz/mirrors/repoforge/redhat/el7/en/x86_64/rpmforge/RPMS/rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm && rpm -i rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm
 
